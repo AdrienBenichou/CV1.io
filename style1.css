@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(-45deg, #ff8a00, #da1b60, #8e2de2, #4a00e0, #4a00e0, #8e2de2, #da1b60, #ff8a00);
+    background-size: 400% 400%;
+    animation: gradientAnimation 20s ease infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .container {
+    max-width: 500px;
+    margin: 50px auto 0; /* Ajustement de la marge supérieure */
+    padding-top: 10px;
+    background-color: #f9f9f9;
+    border-radius: 20px; /* Ajout de coins arrondis */
+    text-align: center;
+    animation: bounce 1s infinite alternate, initialRotation 0s; /* Animation de saut avec une rotation initiale */
+    transition: transform 0.5s ease; /* Ajout d'une transition fluide */
+    border-bottom: 5px solid #4caf4f00; /* Ajout de la bordure en bas */
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-20px); /* Déplacement vers le haut */
+    }
+  }
+  
+
+  
+
+
+
+
+  
+  .profile img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px; /* Augmentation de l'espacement */
+  }
+  
+  h1 {
+    font-family: 'Honk', sans-serif;
+    font-size: 36px;
+    color: #333; /* Modification de la couleur du texte */
+  }
+  
+  h2 {
+    font-family: 'Work Sans', sans-serif; /* Correction du nom de la police */
+    font-size: 28px; /* Réduction de la taille de la police */
+    color: #000000; /* Modification de la couleur du texte */
+  }
+
+  h3 {
+    font-family: "Ubuntu", sans-serif; /* Correction du nom de la police */
+    font-size: 15px; /* Réduction de la taille de la police */
+    color: #000000; /* Modification de la couleur du texte */
+    text-align: left; /* Alignement du texte vers la gauche */
+}
+  
+
+  
+
+
+  .container {
+    max-width: 500px;
+    margin: 50px auto 0; /* Ajustement de la marge supérieure */
+    padding-top: 10px;
+    background-color: #f9f9f9;
+    border-radius: 20px; /* Ajout de coins arrondis */
+    text-align: center;
+    animation: bounce 1s infinite alternate, initialRotation 0s; /* Animation de saut avec une rotation initiale */
+    transition: transform 0.5s ease; /* Ajout d'une transition fluide */
+    border-bottom: 5px solid #4caf4f00; /* Ajout de la bordure en bas */
+}
+
+button {
+    background-color: #7845a0; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Rembourrage interne du bouton */
+    border: none; /* Supprimer la bordure */
+    border-radius: 5px; /* Bordure arrondie */
+    cursor: pointer; /* Curseur de souris au survol */
+    font-size: 16px; /* Taille de la police */
+}
+
+button:hover {
+    background-color: #7845a0; /* Changement de couleur de fond au survol */
+}
+
+button:focus {
+    outline: none; /* Supprimer la bordure de mise au point */
+}
+
+
+.button-container {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-container button {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #c800ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.button-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: #c800ff;
+  transition: all 0.5s ease;
+  border-radius: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.button-container:hover::before {
+  width: 1;
+  height: 0;
+  opacity: 1;
+}
+
+.button-container:hover button {
+  transform: scale(0.9);
+}
+
+
+
+.page {
+  position: relative; /* Pour que les containers soient positionnés par rapport à cette div */
+}
+
+.container2, 
+.container3, 
+.container4, .container5 {
+  
+  margin: 50px auto 0; /* Ajustement de la marge supérieure */
+  max-width: 500px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  opacity: 0; /* Les containers sont initialement invisibles */
+  animation:  fadeIn 1s forwards; /* Animation de défilement et de fondu en entrée */
+}
+
+
+
+/* Animation de fondu en entrée */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.container2:nth-child(1) {
+  animation-delay: 0s; /* Le premier container commence immédiatement */
+}
+
+.container3:nth-child(2) {
+  animation-delay: 3s; /* Le deuxième container commence après 10 secondes */
+}
+
+.container4:nth-child(3) {
+  animation-delay: 6s; /* Le troisième container commence après 20 secondes */
+}
+
+.container5:nth-child(4) {
+  animation-delay: 9s; /* Le quatrième container commence après 30 secondes */
+}
+
+
+.container6 {
+  position: absolute;
+  top: 100px; /* Ajuste la position verticale par rapport au haut */
+  left: 25px; /* Ajuste la position horizontale par rapport à la gauche */
+  margin: 50px 0 0 50px; /* Ajuste la marge supérieure et la marge gauche */
+  text-align: left;
+  background-color: #f9f9f900;
+  border-radius: 10px;
+  opacity: 1;
+  animation: moveImage 2s infinite alternate;
+}
+.container6 img {
+  width: 300px; /* Définissez la largeur souhaitée */
+  height: auto; /* Pour conserver les proportions de l'image */
+}
+@keyframes moveImage {
+  0% {
+    transform: translateX(0) rotate(0deg); /* Pas de translation et pas de rotation */
+  }
+  50% {
+    transform: translateX(200px) rotate(-10deg); /* Translation horizontale de 200px avec une rotation complète de 360 degrés */
+  }
+  100% {
+    transform: translateX(200px) rotate(10deg); /* Translation horizontale de 200px avec une rotation complète de 360 degrés */
+  }
+}
+
+
